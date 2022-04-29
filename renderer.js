@@ -6,14 +6,18 @@
 // process.
 const addon = require( '../node-addon-examples/6_object_wrap/node-addon-api/build/Release/addon.node' );
 const jquery = require( 'jquery' );
-
+console.log( "creating new worker object..." );
 var worker = new Worker( './worker.js' );
 worker.onmessage = function ( event ) {
-    console.log( "worker : ", event.data );
-    document.querySelector( 'h1' ).innerHTML = event.data;
-    //worker.terminate();
-    console.log( "jquery innerHTML: " + jquery( 'h1' ).html() );
+    console.log( "worker.onmessage: " + event.data );
+    for ( const key in event.data) {
+        var pinData     = {};
+        pinData.pin_address = key;
+        pinData.pin_value   = event.data[ key ];
+        ledObservers.update( pinData );
+    }
 }
 worker.onerror = function ( event ) {
     console.log( event.message, event );
+    worker.terminate();
 };

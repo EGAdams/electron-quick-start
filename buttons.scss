@@ -1,0 +1,66 @@
+.button_container {  
+
+}
+
+@mixin btn($bg) {
+    outline: none;
+    user-select: none;
+  
+    border: 0;
+    border-top: 1px solid lighten($bg, 25%);
+    border-left: 1px solid lighten($bg, 25%);
+    border-radius: 0.5em;
+    background: $bg;
+    background: radial-gradient(circle at center, darken($bg, 10%), $bg);
+    
+    font-size: 2em;
+    font-weight: bold;
+    color: fade-out(darken($bg, 50%), 0.5);
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px fade-out(lighten($bg, 30%), .5);
+    
+    transition:
+      box-shadow .05s linear,
+      margin .05s linear;
+  
+    margin: 4px 4px 4px 4px;
+    padding: .5em .8em;
+  
+    box-shadow:
+      inset 1px 1px 2px rgba(255, 255, 255, .6),
+      1px 4px 0px 0px darken($bg, 20%),
+      1px 4px 0px 1px #111,
+      1px 4px 2px 1px #000,
+      
+      2px 06px 2px rgba(0, 0, 0, .15),
+      3px 07px 2px rgba(0, 0, 0, .15),
+      4px 08px 2px rgba(0, 0, 0, .15),
+      5px 09px 2px rgba(0, 0, 0, .15),
+      6px 10px 2px rgba(0, 0, 0, .15);
+    
+    &:active {
+      background: radial-gradient(circle at center, darken($bg, 20%), $bg);
+      margin: 6px 4px 2px 4px;
+      box-shadow:
+        inset 1px 1px 2px rgba(255, 255, 255, .3),
+        1px 2px 0px 0px darken($bg, 40%),
+        1px 2px 0px 1px #111,
+        1px 2px 2px 1px #000,
+        
+        2px 6px 2px rgba(0, 0, 0, .1),
+        2px 6px 2px rgba(0, 0, 0, .1),
+        2px 6px 2px rgba(0, 0, 0, .0),
+        2px 6px 2px rgba(0, 0, 0, .0),
+        2px 6px 2px rgba(0, 0, 0, .0);
+    }
+  }
+  
+  body {
+    background: #bbc;  
+  }
+  
+  button {
+    @include btn(#90909c);
+    //border-radius: 50%;
+    width: 300px
+  }
