@@ -1,0 +1,166 @@
+.container {
+    display: grid;
+    grid-template-columns: .5fr .5fr .5fr .5fr .1fr .5fr .5fr .5fr .5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". green_point_1 . green_point_2 . green_point_3 . green_point_4 ."
+        ". red_point_1 . red_point_2 . red_point_3 . red_point_4 ."
+        ". . orange_top_serve_2 orange_top_serve_2 . orange_top_serve_1 orange_top_serve_1 . ."
+        ". . . red_game_1 . green_game_1 . . ."
+        ". . . red_game_2 . green_game_2 . . ."
+        ". . . red_game_3 . green_game_3 . . ."
+        ". . . red_game_4 . green_game_4 . . ."
+        ". . . red_game_5 . green_game_5 . . ."
+        ". . . red_game_6 . green_game_6 . . ."
+        ". . . red_game_7 . green_game_7 . . ."
+        ". . . blue_led_1 . blue_led_2 . . ."
+        ". yellow_led_1 . orange_led_1 . yellow_led_2 . orange_led_2 ."
+        ". . . . . . . . .";
+}
+
+.green_point_1 {
+    grid-area: green_point_1;
+}
+
+.green_point_2 {
+    grid-area: green_point_2;
+}
+
+.green_point_3 {
+    grid-area: green_point_3;
+}
+
+.green_point_4 {
+    grid-area: green_point_4;
+}
+
+.red_game_1 {
+    grid-area: red_game_1;
+}
+
+.green_game_1 {
+    grid-area: green_game_1;
+}
+
+.red_point_1 {
+    grid-area: red_point_1;
+}
+
+.red_point_2 {
+    grid-area: red_point_2;
+}
+
+.red_point_3 {
+    grid-area: red_point_3;
+}
+
+.red_point_4 {
+    grid-area: red_point_4;
+}
+
+.red_game_2 {
+    grid-area: red_game_2;
+}
+
+.green_game_2 {
+    grid-area: green_game_2;
+}
+
+.red_game_3 {
+    grid-area: red_game_3;
+}
+
+.green_game_3 {
+    grid-area: green_game_3;
+}
+
+.red_game_4 {
+    grid-area: red_game_4;
+}
+
+.red_game_5 {
+    grid-area: red_game_5;
+}
+
+.green_game_4 {
+    grid-area: green_game_4;
+}
+
+.green_game_5 {
+    grid-area: green_game_5;
+}
+
+.red_game_6 {
+    grid-area: red_game_6;
+}
+
+.green_game_6 {
+    grid-area: green_game_6;
+}
+
+.orange_top_serve_2 {
+    grid-area: orange_top_serve_2;
+}
+
+.orange_top_serve_1 {
+    grid-area: orange_top_serve_1;
+}
+
+.red_game_7 {
+    grid-area: red_game_7;
+}
+
+.green_game_7 {
+    grid-area: green_game_7;
+}
+
+.blue_led_1 {
+    grid-area: blue_led_1;
+}
+
+.blue_led_2 {
+    grid-area: blue_led_2;
+}
+
+.yellow_led_1 {
+    grid-area: yellow_led_1;
+}
+
+.orange_led_1 {
+    grid-area: orange_led_1;
+}
+
+.yellow_led_2 {
+    grid-area: yellow_led_2;
+}
+
+.orange_led_2 {
+    grid-area: orange_led_2;
+}
+
+
+html, body, .container {
+    height: 96%;
+    margin: 0;
+}
+
+/* For presentation only, no need to copy the code below */
+
+.container * {
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.container *:after {
+    /* content: attr(class); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
