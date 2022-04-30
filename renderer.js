@@ -21,3 +21,10 @@ worker.onerror = function ( event ) {
     console.log( event.message, event );
     worker.terminate();
 };
+
+jquery( document ).ready( function () {
+    jquery( '.player1_button' ).click( function () {
+        console.log( "player1_button clicked!" );
+        worker.postMessage( { 'command': 'digitalWrite', 'pin_name': 202, 'pin_value': 25, 'release_value': 2000 } );
+    });
+});    

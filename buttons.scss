@@ -1,5 +1,6 @@
 .button_container {  
-
+    position: fixed;
+    top: 90%;
 }
 
 @mixin btn($bg) {
