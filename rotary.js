@@ -130,5 +130,7 @@ $( '.point' ).click( function () {
         '-ms-transform': 'rotate(' + deg + 'deg)',
         '-o-transform': 'rotate(' + deg + 'deg)',
         'transform': 'rotate(' + deg + 'deg)'
-    } );
-} );
+    });
+});
+
+$( '#test-0' ).addClass( 'selected' );  // show that mode 1 is selected
