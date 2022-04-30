@@ -28,3 +28,10 @@ jquery( document ).ready( function () {
         worker.postMessage( { 'command': 'digitalWrite', 'pin_name': 202, 'pin_value': 25, 'release_value': 2000 } );
     });
 });    
+
+jquery( document ).ready( function () {
+    jquery( '.player2_button' ).click( function () {
+        console.log( "player2_button clicked!" );
+        worker.postMessage( { 'command': 'digitalWrite', 'pin_name': 202, 'pin_value': 600, 'release_value': 2000 } );
+    });
+});    

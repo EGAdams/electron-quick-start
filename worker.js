@@ -20,12 +20,11 @@ onmessage = function ( event ) {
         loop( 1 )
     }
 }
-
 loop( 1 );
 
 function loop( numberOfLoops ) {
     console.log( "entering while loop..." );
-    let iterations = 0;
+    iterations = 0;
     while ( iterations < numberOfLoops ) {
         if ( cppInterface.digitalRead( PLAYER_BUTTONS ) < 1000 ) {
             console.log( "pin PLAYER_BUTTONS is low!" ); 
