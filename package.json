@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "scss": "node-sass --watch scss -o css"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,7 +18,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^18.1.0"
+    "electron": "^18.1.0",
+    "node-sass": "^7.0.1"
   },
   "dependencies": {
     "jquery": "^3.6.0"

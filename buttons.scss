@@ -1,9 +1,15 @@
 .button_container {  
+    display: flex;
+    place-content: space-between;
+    flex: 100px;
     position: fixed;
     top: 90%;
+    margin-bottom: 30px;
 }
 
 @mixin btn($bg) {
+    height: 40px;
+    width: 100px;
     outline: none;
     user-select: none;
   
@@ -14,7 +20,7 @@
     background: $bg;
     background: radial-gradient(circle at center, darken($bg, 10%), $bg);
     
-    font-size: 2em;
+    font-size: 1em;
     font-weight: bold;
     color: fade-out(darken($bg, 50%), 0.5);
     text-transform: uppercase;
@@ -63,5 +69,5 @@
   button {
     @include btn(#90909c);
     //border-radius: 50%;
-    width: 300px
+    width: 95%
   }
