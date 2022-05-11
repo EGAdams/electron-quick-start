@@ -8,24 +8,14 @@ const addon = require( '../node-addon-examples/6_object_wrap/node-addon-api/buil
 const jquery = require( 'jquery' );
 console.log( "creating new worker object..." );
 var worker = new Worker( './worker.js' );
-worker.onmessage = function ( event ) {
-    console.log( "worker.onmessage: " + event.data );
-    for ( const key in event.data) {
-        var pinData     = {};
-        pinData.pin_address = key;
-        pinData.pin_value   = event.data[ key ];
-        ledObservers.update( pinData );
-    }
-}
-worker.onerror = function ( event ) {
-    console.log( event.message, event );
-    worker.terminate();
-};
+worker.onmessage = function ( event ) { console.log( "worker.onmessage: " + event.data ); }
+
+worker.onerror = function ( event ) { console.log( event.message, event ); worker.terminate(); };
 
 jquery( document ).ready( function () {
     jquery( '.player1_button' ).click( function () {
         console.log( "player1_button clicked!" );
-        worker.postMessage( { 'command': 'digitalWrite', 'pin_name': 202, 'pin_value': 25, 'release_value': 2000 } );
+        worker.postMessage({ 'command': 'digitalWrite', 'pin_name': 202, 'pin_value': 25, 'release_value': 2000 });
     });
 });    
 
@@ -34,4 +24,5 @@ jquery( document ).ready( function () {
         console.log( "player2_button clicked!" );
         worker.postMessage( { 'command': 'digitalWrite', 'pin_name': 202, 'pin_value': 600, 'release_value': 2000 } );
     });
-});    
+});
+    

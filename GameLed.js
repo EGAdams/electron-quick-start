@@ -12,6 +12,10 @@ class GameLed {
         this.pin_value     = "LOW"; }
 
     update( pinData ) {
+        if ( !pinData ) {
+            console.error( "pinData is undefined!" );
+            return; }
+
         if( pinData.pin_address == this.pin_address ) {
             if( pinData.pin_value == "1" ) {
                 this.turnOn();
