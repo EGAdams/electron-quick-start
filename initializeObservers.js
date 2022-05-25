@@ -2,7 +2,7 @@
  * entry point
  */
 const PinState = require( './PinState' );
-let ledObservers = new LedObservers();
+let ledObservers = new Subject();
 
 let p1_points_led1 = new GameLed( "P1_POINTS_LED1", "green_point_1", "led-green-on", "led-green-off" ); 
 let p1_points_led2 = new GameLed( "P1_POINTS_LED2", "green_point_2", "led-green-on", "led-green-off" ); 

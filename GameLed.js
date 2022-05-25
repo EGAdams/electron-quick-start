@@ -12,9 +12,7 @@ class GameLed {
         this.pin_value     = "LOW"; }
 
     update( pinData ) {
-        if ( !pinData ) {
-            console.error( "pinData is undefined!" );
-            return; }
+        if ( !pinData ) { console.error( "pinData is undefined!" ); return; }
 
         if( pinData.pin_address == this.pin_address ) {
             if( pinData.pin_value == "1" ) {
@@ -26,13 +24,13 @@ class GameLed {
     turnOn() {
         this.isOn = true;
         this.pin_value = "ON"; 
-        jQuery( `.${this.class_id}` ).addClass( this.css_on_class );
+        jQuery( `.${this.class_id}` ).addClass(    this.css_on_class  );
         jQuery( `.${this.class_id}` ).removeClass( this.css_off_class ); }
 
     turnOff() {
         this.isOn = false;
         this.pin_value = "OFF"; 
-        jQuery( `.${this.class_id}` ).addClass( this.css_off_class );
-        jQuery( `.${this.class_id}` ).removeClass( this.css_on_class ); }
+        jQuery( `.${this.class_id}` ).addClass(    this.css_off_class );
+        jQuery( `.${this.class_id}` ).removeClass( this.css_on_class  ); }
 
 }

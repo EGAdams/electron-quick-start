@@ -5,8 +5,8 @@
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        ". green_point_1 . green_point_2 . green_point_3 . green_point_4 ."
-        ". red_point_1 . red_point_2 . red_point_3 . red_point_4 ."
+        ". . green_point_1 green_point_2 . green_point_3 green_point_4 . ."
+        ". . red_point_1 red_point_2 . red_point_3 red_point_4 . ."
         ". . orange_top_serve_2 orange_top_serve_2 . orange_top_serve_1 orange_top_serve_1 . ."
         ". . . red_game_1 . green_game_1 . . ."
         ". . . red_game_2 . green_game_2 . . ."
@@ -16,7 +16,7 @@
         ". . . red_game_6 . green_game_6 . . ."
         ". . . red_game_7 . green_game_7 . . ."
         ". . . blue_led_1 . blue_led_2 . . ."
-        ". yellow_led_1 . orange_led_1 . yellow_led_2 . orange_led_2 ."
+        ". .   yellow_led_1 orange_led_1 . yellow_led_2 orange_led_2 . ."
         ". . . . . . . . .";
 }
 

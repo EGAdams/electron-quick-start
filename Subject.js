@@ -1,7 +1,7 @@
 /*
- *  class LedObservers
+ *  class Subject
  */
-class LedObservers {
+class Subject {
     constructor() { this.observers = []; }
 
     addObserver( observer ) { this.observers.push( observer ); }
