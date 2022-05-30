@@ -33,17 +33,17 @@
     position: fixed;
     height: 100px;
     width: 100px;
-    top: 81%;
-    left: 67%;
+    top: 82%;
+    left: 76.5%;
 }
 
 .rotary-switch {
     margin: 0px;
     position: fixed;
-    top: 759px;
-    left: 1243px;
+    top: 87%;
+    left: 83%;
     bottom: 4%;
-    right: 26%;
+    right: 4%;
     border: solid 1px #7E7E7E;
     border-radius: 50%;
     box-shadow: inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A;

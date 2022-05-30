@@ -13,9 +13,20 @@
 </body>
 <script>
     fetch('test.txt')
-  .then(response => response.text())
-  .then(text => console.log(text))
-    // readTextFile( "file:///C:/Users/EG/Desktop/2022/april/5th_week/electron-quick-start/test.txt" );
+    .then(response => response.text())
+    .then(text => { 
+        console.log( "file contents: " );
+        text = text.replaceAll( '\r', '' );
+        let file_array = text.split("\n");
+        let log_array = [];
+        for( let i = 0; i < file_array.length; i++ ){
+            let line = file_array[i];
+            if( line.length > 0 ){
+                log_array.push( JSON.parse( line ));
+            }
+        }
+        console.log( log_array );
+    });
 </script>
 
 </html>

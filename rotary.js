@@ -8,7 +8,7 @@ var r = 30;
 rotarySwitch( id, r, labels );
 
 function rotarySwitch( id, r, l ) {
-    $( "body" ).append(
+    $( "#test" ).append(
         "<div id='rotary-container-" + id + "' class='rotary-container' " +
         "style='width:" + r * 2 + "px;height:" + r * 2 + "px;'>" +
         "<div id='rotary-switch-" + id + "' class='rotary-switch'>" +

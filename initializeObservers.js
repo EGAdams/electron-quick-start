@@ -1,7 +1,7 @@
 /*
  * entry point
  */
-const PinState = require( './PinState' );
+const PinState = require( '../PinState' );
 let ledObservers = new Subject();
 
 let p1_points_led1 = new GameLed( "P1_POINTS_LED1", "green_point_1", "led-green-on", "led-green-off" ); 
@@ -74,4 +74,4 @@ ledObservers.addObserver( p2_tiebreaker );
 
 console.log( "starting update timer..." );
 let pinState = new PinState( ledObservers );
-setInterval( function () { console.log( "updating pin data..." ); pinState.updateLedPinData(); }, 250 );
+setInterval( function () { pinState.updateLedPinData(); }, 250 );

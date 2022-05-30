@@ -139,7 +139,7 @@
 // gsPropertySubject.addObserver( _prevP1Sets );
 // gsPropertySubject.addObserver( _prevP2Sets );
 
-GameState = require( "./GameState" );
+GameState = require( "../GameState" );
 let project_path = "C:\\Users\\EG\\Desktop\\2022\\april\\5th_week\\node-addon-examples\\6_object_wrap\\node-addon-api\\";
 let game_state_path = project_path + "game_state_data\\game_state_data.txt"; 
 let gameState = new GameState( game_state_path );
