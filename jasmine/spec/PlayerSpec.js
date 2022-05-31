@@ -13,12 +13,12 @@ describe( "Player", function () {
 
         //demonstrates use of custom matcher
         // expect(player).toBePlaying(song);
-        for ( var i = 0; i < 22; i++ ) {
-        $( ".player1_button" ).trigger( "click" ); }
-        for ( i = 0; i < 26; i++ ) {
-        $( ".player2_button" ).trigger( "click" ); }
-        for ( var i = 0; i < 4; i++ ) {
-        $( ".player1_button" ).trigger( "click" ); }
+        // for ( var i = 0; i < 22; i++ ) {
+        // $( ".player1_button" ).trigger( "click" ); }
+        // for ( i = 0; i < 26; i++ ) {
+        // $( ".player2_button" ).trigger( "click" ); }
+        // for ( var i = 0; i < 4; i++ ) {
+        // $( ".player1_button" ).trigger( "click" ); }
     } );
 
     describe( "when song has been paused", function () {

@@ -10,8 +10,6 @@ cppInterface.digitalWrite( 38,              1    ); // RESET
 cppInterface.digitalWrite( 26,              1    ); // UNDO
 cppInterface.digitalWrite( PLAYER_BUTTONS,  2000 ); // PLAYER_BUTTONS
 onmessage = function ( event ) {
-    console.log( "worker.onmessage: " + event.data );
-    console.log( "command: " + event.data.command );
     if ( event.data.command === 'digitalWrite' ) {
         cppInterface.digitalWrite( event.data.pin_name, event.data.pin_value );
         if ( event.data.release_value ) {    
