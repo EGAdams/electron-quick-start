@@ -7,7 +7,7 @@ class PinState {
     constructor( ledObservers ) { 
         console.log( "constructing PinState..." ); 
         this._ledObservers = ledObservers; 
-        this.pin_file_path = "C:\\Users\\EG\\Desktop\\2022\\april\\5th_week\\node-addon-examples\\6_object_wrap\\node-addon-api\\pin_data\\"; }
+        this.pin_file_path = "C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp\\pin_data\\"; }
 
     updateLedPinData() {
         for ( const key in this._ledObservers[ 'observers' ]) {
@@ -21,7 +21,9 @@ class PinState {
                 console.error( "pinData is undefined!" );
                 return;
             }    
-            this._ledObservers.update( pinData ); }}
+            this._ledObservers.update( pinData ); 
+        }
+    }
 }
 
 module.exports = PinState;  

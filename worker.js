@@ -1,6 +1,6 @@
 //address of native addon 
 const { Event } = require( 'jquery' );
-const addon = require('../node-addon-examples/6_object_wrap/node-addon-api/build/Release/addon.node');
+const addon = require( 'C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp\\build\\Release\\addon.node' );
 //communicating with main process of electron app.
 console.log( "entered worker.js" );
 let iterations = 0;

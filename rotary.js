@@ -112,7 +112,10 @@ $( '.point' ).click( function () {
     } // mode 3
     if ( pos.left == 125 && pos.top == 55 ) {
         setMode4();
+        console.log( "calling game loop..." );
+        cppInterface.gameLoop();
     } // mode 4
+    
 
     /* Calculate the degree in relation to the point and control rotation direction. */
     var deg = Math.atan( ( pos.left - y0 ) / ( x0 - pos.top ) ) * 180 / Math.PI;

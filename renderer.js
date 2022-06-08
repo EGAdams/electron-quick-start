@@ -4,7 +4,7 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
-const addon = require( '../../node-addon-examples/6_object_wrap/node-addon-api/build/Release/addon.node' );
+const addon = require( 'C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp\\build\\Release\\addon.node' ); 
 const jquery = require( 'jquery' );
 console.log( "creating new worker object..." );
 var worker = new Worker( '../worker.js' );
