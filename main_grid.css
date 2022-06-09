@@ -1,10 +1,10 @@
 table.fixed {
     table-layout:fixed; 
     width:90px;
-    border-top:1px solid;
-    border-left:1px solid;
-    border-right:1px solid;
-    border-bottom: 1px solid;}/*Setting the table width is important!*/
+    ?
+}
+
+/*Setting the table width is important!*/
 table.fixed td {overflow:hidden;}/*Hide text outside the cell.*/
 table.fixed td:nth-of-type(1) {width:150px;}/*Setting the width of column 1.*/
 table.fixed td:nth-of-type(2) {width:30px;}/*Setting the width of column 2.*/

@@ -136,4 +136,4 @@ $( '.point' ).click( function () {
     });
 });
 
-$( '#test-0' ).addClass( 'selected' );  // show that mode 1 is selected
+$( '#test-0' ).addClass( 'selected' );  // show the selected mode

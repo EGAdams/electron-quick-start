@@ -8,8 +8,7 @@ const addon = require( 'C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp
 const jquery = require( 'jquery' );
 console.log( "creating new worker object..." );
 var worker = new Worker( '../worker.js' );
-worker.onmessage = function ( event ) { console.log( "worker.onmessage: " + event.data ); }
-
+worker.onmessage = function ( _event ) { /* console.log( "worker.onmessage: " + event.data ); */ }
 worker.onerror = function ( event ) { console.log( event.message, event ); worker.terminate(); };
 
 jquery( document ).ready( function () {

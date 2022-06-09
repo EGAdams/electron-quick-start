@@ -1,9 +1,7 @@
 /*
  * initialize game state observers
  */
+const GAME_STATE_DATA_PATH = "C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp\\game_state_data\\game_state_data.txt";
 GameState = require( "../GameState" );
-let project_path = "C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp\\game_state_data\\";
-let game_state_path = project_path + "game_state_data.txt"; 
-let gameState = new GameState( game_state_path );
-
+let gameState = new GameState( GAME_STATE_DATA_PATH );
 setInterval( () => { gameState.update(); }, 1000 );
