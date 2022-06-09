@@ -1,103 +1,104 @@
-.grid-area {
-    font-size: 2.5em;
+.grid-area {    font-size: 2.5em;
 }
-.game_state_container {  
- display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0px 0px 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "_toggle _p1PointsMem"
-    "_tieBreakOnly _p2PointsMem "
-    "_started _rotaryPosition "
-    "_p1GamesMem _p2GamesMem"
-    "_p1SetsMem _p2SetsMem"
-    "_updateDisplayDelay _tieLEDsOn"
-    "_now _previousTime "
-    "_buttonDelay _playerButton"
-    "_tieBreak _serve"
-    "_pointFlash _prevRotaryPosition"
-    "_undo _rotaryChange"
-    "_flashDelay _gameFlashDelay"
-    "_tiePulseCount _gameWinPulseCount"
-    "_setWinPulseCount _matchWinPulseCount"
-    "_serveSwitch _setTieBreakMem"
-    "_tieBreakMem _setTieBreak"
-    "player_1_points player_2_points"
-    "player_1_sets   player_2_sets  "
-    "player_1_games  player_2_games ";
+.game_state_container {
+    background-color: whitesmoke;
+    margin: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "toggle p1PointsMem"
+        "tieBreakOnly p2PointsMem "
+        "started rotaryPosition "
+        "p1GamesMem p2GamesMem"
+        "p1SetsMem p2SetsMem"
+        "updateDisplayDelay tieLEDsOn"
+        "now previousTime "
+        "buttonDelay playerButton"
+        "tieBreak serve"
+        "pointFlash prevRotaryPosition"
+        "undo rotaryChange"
+        "flashDelay gameFlashDelay"
+        "tiePulseCount gameWinPulseCount"
+        "setWinPulseCount matchWinPulseCount"
+        "serveSwitch setTieBreakMem"
+        "tieBreakMem setTieBreak"
+        "player_1_points player_2_points"
+        "player_1_sets   player_2_sets  "
+        "player_1_games  player_2_games ";
 }
 
-._p1PointsMem { grid-area: _p1PointsMem; }
+.p1PointsMem { grid-area: p1PointsMem; }
 
-._tieBreakOnly { grid-area: _tieBreakOnly; }
+.tieBreakOnly { grid-area: tieBreakOnly; }
 
-._p2PointsMem { grid-area: _p2PointsMem; }
+.p2PointsMem { grid-area: p2PointsMem; }
 
-._p1GamesMem { grid-area: _p1GamesMem; }
+.p1GamesMem { grid-area: p1GamesMem; }
 
-._p2GamesMem { grid-area: _p2GamesMem; }
+.p2GamesMem { grid-area: p2GamesMem; }
 
-._p1SetsMem { grid-area: _p1SetsMem; }
+.p1SetsMem { grid-area: p1SetsMem; }
 
-._p2SetsMem { grid-area: _p2SetsMem; }
+.p2SetsMem { grid-area: p2SetsMem; }
 
-._toggle { grid-area: _toggle; }
+.toggle { grid-area: toggle; }
 
-._teiBreakOnly { grid-area: _teiBreakOnly; }
+.teiBreakOnly { grid-area: teiBreakOnly; }
 
-.p1Matches { grid-area: p1Matches; }
+.p1Matches { grid-area: 1Matches; }
 
-.p2Matches { grid-area: p2Matches; }
+.p2Matches { grid-area: 2Matches; }
 
-._tieLEDsOn { grid-area: _tieLEDsOn; }
+.tieLEDsOn { grid-area: tieLEDsOn; }
 
-._setTieBreak { grid-area: _setTieBreak; }
+.setTieBreak { grid-area: setTieBreak; }
 
-._tieBreak { grid-area: _tieBreak; }
+.tieBreak { grid-area: tieBreak; }
 
-._serve { grid-area: _serve; }
+.serve { grid-area: serve; }
 
-._pointFlash { grid-area: _pointFlash; }
+.pointFlash { grid-area: pointFlash; }
 
-._started { grid-area: _started; }
+.started { grid-area: started; }
 
-._rotaryPosition { grid-area: _rotaryPosition; }
+.rotaryPosition { grid-area: rotaryPosition; }
 
-._playerButton { grid-area: _playerButton; }
+.playerButton { grid-area: playerButton; }
 
-._prevRotaryPosition { grid-area: _prevRotaryPosition; }
+.prevRotaryPosition { grid-area: prevRotaryPosition; }
 
-._undo { grid-area: _undo; }
+.undo { grid-area: undo; }
 
-._rotaryChange { grid-area: _rotaryChange; }
+.rotaryChange { grid-area: rotaryChange; }
 
-._now { grid-area: _now; }
+.now { grid-area: now; }
 
-._previousTime { grid-area: _previousTime; }
+.previousTime { grid-area: previousTime; }
 
-._updateDisplayDelay { grid-area: _updateDisplayDelay; }
+.updateDisplayDelay { grid-area: updateDisplayDelay; }
 
-._buttonDelay { grid-area: _buttonDelay; }
+.buttonDelay { grid-area: buttonDelay; }
 
-._flashDelay { grid-area: _flashDelay; }
+.flashDelay { grid-area: flashDelay; }
 
-._gameFlashDelay { grid-area: _gameFlashDelay; }
+.gameFlashDelay { grid-area: gameFlashDelay; }
 
-._tiePulseCount { grid-area: _tiePulseCount; }
+.tiePulseCount { grid-area: tiePulseCount; }
 
-._gameWinPulseCount { grid-area: _gameWinPulseCount; }
+.gameWinPulseCount { grid-area: gameWinPulseCount; }
 
-._setWinPulseCount { grid-area: _setWinPulseCount; }
+.setWinPulseCount { grid-area: setWinPulseCount; }
 
-._matchWinPulseCount { grid-area: _matchWinPulseCount; }
+.matchWinPulseCount { grid-area: matchWinPulseCount; }
 
-._serveSwitch { grid-area: _serveSwitch; }
+.serveSwitch { grid-area: serveSwitch; }
 
-._setTieBreakMem { grid-area: _setTieBreakMem; }
+.setTieBreakMem { grid-area: setTieBreakMem; }
 
-._tieBreakMem { grid-area: _tieBreakMem; }
+.tieBreakMem { grid-area: tieBreakMem; }
 
 .player_1_points { grid-area: player_1_points; }
 
