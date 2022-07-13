@@ -1,8 +1,5 @@
-/*
- *  class PinState
- */
+/** @class PinState */
 const fs = require('fs');
-
 class PinState {
     constructor( ledObservers ) { 
         console.log( "constructing PinState..." ); 
@@ -21,9 +18,12 @@ class PinState {
                 console.error( "pinData is undefined!" );
                 return;
             }    
-            this._ledObservers.update( pinData ); 
-        }
-    }
+            this._ledObservers.update( pinData ); }}
+
+    writeDigitalPin( pin_address, pin_value ) { 
+        try {
+            fs.writeFileSync( this.pin_file_path + pin_address + ".txt", pin_value + "" );
+        } catch ( err ) { console.error( err ); }}
 }
 
 module.exports = PinState;  

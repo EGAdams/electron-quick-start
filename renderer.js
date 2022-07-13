@@ -28,7 +28,7 @@ jquery( document ).ready( function () {
 jquery( document ).ready( function () {
     jquery( '.undo_button' ).click( function () {
         console.log( "undo_button clicked!" );
-        worker.postMessage( { 'command': 'digitalWrite', 'pin_name': 26, 'pin_value': 0, 'release_value': 1 } );
+        worker.postMessage( { 'command': 'digitalWrite', 'pin_name': 39, 'pin_value': 0, 'release_value': 1 } );
     });
 });
 

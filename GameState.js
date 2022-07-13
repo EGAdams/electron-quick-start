@@ -19,6 +19,7 @@ class GameState {
                     <tr>
                         <td>${ key }</td>
                         <td>${ game_state_data[ key ] }</td>
+                    </tr>    
                 </table>`
             ); }}
 }
