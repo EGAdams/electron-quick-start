@@ -7,6 +7,9 @@ function createWindow() {
     const mainWindow = new BrowserWindow( {
         width: 1210,
         height: 940,
+		// position
+		x: 500,
+		y: 0,
         webPreferences: {
             preload: path.join( __dirname, 'preload.js' ),
             nodeIntegration: true,
@@ -14,7 +17,7 @@ function createWindow() {
             nodeIntegrationInSubFrames: true,
             enableRemoteModule: true,
             contextIsolation: false, //required flag
-            devTools: true
+            devTools: false
         }
     })
 

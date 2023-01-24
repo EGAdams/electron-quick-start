@@ -46,10 +46,10 @@ class GameLed {
 
     blink() {
         if ( this.interval != 0 ) { 
-            console.log( "interval: " + this.interval );
+            // console.log( "interval: " + this.interval );
             return; 
         }
-        console.log( "setting interval.  this interval: " + this.interval );
+        // console.log( "setting interval.  this interval: " + this.interval );
         this.interval = setInterval( () => { 
             if( this.isOn ) {
                 this.turnOff();
