@@ -80,6 +80,16 @@
             <div class="player_1_games"></div>
             <div class="player_2_games"></div>
         </div>
+        <table>
+        <tr>
+            <td><button class="start_test_button">Start Test</button></td>
+            <td><button class="player1_win_game">P1 Win Game</button></td>
+            <td><button class="player2_win_game">P2 Win Game</button></td>
+            <td><button class="_button">Not wired</button></td>
+            <td><div id="test"></div></td>
+        </tr>
+        </table>    
+
     </div>
     <div class="right">    
         We are using Node.js <span id="node-version"></span>,
@@ -138,6 +148,9 @@
         
         
         <!-- You can also require other files to run in this process -->
+        <script src="./test/Tester.js"></script>
+        <script src="./test/WinGame.js"></script>
+        <script src="./test/WinSet.js"></script>
         <script src="../renderer.js"></script>
         <script src="../initializeObservers.js"></script>
         <script src="../initGsObservers.js"></script>

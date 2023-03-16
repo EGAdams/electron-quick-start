@@ -7,7 +7,6 @@ function createWindow() {
     const mainWindow = new BrowserWindow( {
         width: 1210,
         height: 940,
-		// position
 		x: 500,
 		y: 0,
         webPreferences: {
@@ -17,7 +16,7 @@ function createWindow() {
             nodeIntegrationInSubFrames: true,
             enableRemoteModule: true,
             contextIsolation: false, //required flag
-            devTools: false
+            devTools: true
         }
     })
 

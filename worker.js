@@ -1,8 +1,9 @@
-//address of native addon 
-const { Event } = require( 'jquery' );
+//
+// worker.js  waits for messages from html page
+//
+const { Event } = require( 'jquery' );  //address of native addon below
 const addon = require( 'C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp\\build\\Release\\addon.node' );
-//communicating with main process of electron app.
-console.log( "entered worker.js" );
+console.log( "entered worker.js" );//communicating with main process of electron app.
 let iterations = 0;
 const PLAYER_BUTTONS = 202;
 let cppInterface = new addon.CppInterface( 42 );
@@ -17,11 +18,9 @@ onmessage = function ( event ) {
             cppInterface.digitalWrite( event.data.pin_name, event.data.release_value );
         }
         loop( 1 )
-    } else {
-        loop( 1 );
-    }
-}
-loop( 1 );
+    } else { loop( 1 ); }}
+
+loop( 1 );  // loop regardless
 
 function loop( numberOfLoops ) {
     console.log( "entering while loop..." );
@@ -35,12 +34,4 @@ function loop( numberOfLoops ) {
             console.log( "pin PLAYER_BUTTONS is back to normal." );
         }    
         cppInterface.gameLoop();
-        // postMessage( cppInterface.getPinMap() );
-        iterations++;
-    } 
-}
-
-
-
-
-
+        iterations++; }}
