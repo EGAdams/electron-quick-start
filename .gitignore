@@ -1,3 +1,6 @@
 node_modules
 dist/
 
+.vs/electron-quick-start/FileContentIndex/
+.vs/electron-quick-start/v17/
+.vs/slnx.sqlite

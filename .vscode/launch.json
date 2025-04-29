@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Electron: Debug Both JS and C++",
+      "configurations": [
+        "Electron: Debug Main Process (C++ Addon)",
+        "Attach to Native Addon"
+      ],
+      "stopAll": true
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Electron: Debug Main Process (C++ Addon)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/electron/dist/electron.exe",
+      "args": [ "." ],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "outputCapture": "std",
+      "internalConsoleOptions": "openOnSessionStart",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}\\node_modules\\electron\\dist\\electron.exe"
+      }
+    },
+    {
+      "name": "Attach to Native Addon",
+      "type": "cppvsdbg",
+      "request": "attach",
+      "processId": "${command:PickProcess}",
+      "symbolSearchPath": "C:\\Users\\NewUser\\tennis_cpp\\build\\Debug",
+      "nativeOnly": true
+    }
+  ]
+}

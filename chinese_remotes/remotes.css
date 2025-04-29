@@ -1,0 +1,92 @@
+/*  chinese_remotes/remotes.css
+ *  ------------------------------------------------------------
+ *  Two 2 × 2 button “remotes” laid out side-by-side with a gap
+ *  between them – all done with **CSS Grid** (no Flexbox).
+ *
+ *  ┌───────────────┐   80 px gap   ┌───────────────┐
+ *  │  1   2        │               │   5   6       │
+ *  │  3   4        │               │   7   8       │
+ *  └───────────────┘               └───────────────┘
+ *      Red remote                       Green remote
+ *  ------------------------------------------------------------
+ */
+
+ .remotes-container{
+  /* 4 button tracks + one spacer track in the middle */
+  display:grid;
+  grid-template-columns: repeat(2,6rem)        /* red remote  */
+                       5rem                    /* spacer      */
+                       repeat(2,6rem);         /* green remote*/
+  grid-template-rows: repeat(2,6rem);          /* 2 rows high */
+  justify-content:start;
+  align-content:start;
+  /* a little breathing room around the whole thing */
+  margin:1rem 0;
+}
+
+/* ------------------------------------------------------------
+* Generic button styling – feel free to tweak sizes & fonts
+* ---------------------------------------------------------- */
+.remotes-container > div{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:1.25rem;
+  color:#fff;
+  border:3px solid #222;
+  border-radius:8px;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* ------------------------------------------------------------
+* Position each button on the grid
+* ---------------------------------------------------------- */
+
+/* ----- Red remote (left) ----- */
+.red_remote_red_score   {grid-column:1; grid-row:1;}
+.red_remote_green_score {grid-column:2; grid-row:1;}
+.red_remote_undo        {grid-column:1; grid-row:2;}
+.red_remote_reset       {grid-column:2; grid-row:2;}
+
+/* ----- Green remote (right) ----- */
+.green_remote_green_score{grid-column:4; grid-row:1;}
+.green_remote_red_score  {grid-column:5; grid-row:1;}
+.green_remote_undo       {grid-column:4; grid-row:2;}
+.green_remote_reset      {grid-column:5; grid-row:2;}
+
+/* ------------------------------------------------------------
+* Colours for the individual buttons
+* ---------------------------------------------------------- */
+
+/* Left (red) remote colours */
+.red_remote_red_score   {background:#b30000;}   /* red */
+.red_remote_green_score {background:#007500;}   /* green */
+.red_remote_undo        {background:#004a99;}   /* blue */
+.red_remote_reset       {background:#000;}      /* black */
+
+/* Right (green) remote colours */
+.green_remote_green_score{background:#007500;}  /* green */
+.green_remote_red_score  {background:#b30000;}  /* red */
+.green_remote_undo       {background:#004a99;}  /* blue */
+.green_remote_reset      {background:#000;}     /* black */
+
+/* ------------------------------------------------------------
+* “Remote body” — give each 2 × 2 group a visible outline
+* ---------------------------------------------------------- */
+.remotes-container{
+  /* We’ll fake a body by outlining the entire track group     */
+  /* Red remote body */
+  background:
+      /* left body */
+      linear-gradient(#3a3a3a,#3a3a3a) 0 0/ 12rem 12.1rem no-repeat,
+      /* right body (darker – “black”) */
+      linear-gradient(#111,#111)       17rem 0/ 12rem 12.1rem no-repeat;
+  background-repeat:no-repeat;
+  /* keep the bodies behind the buttons */
+  padding:0.5rem;
+  border-radius:10px;
+  column-gap:0; /* handled by explicit spacer track */
+  row-gap:0.5rem;
+}

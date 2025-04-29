@@ -4,7 +4,9 @@ class PinState {
     constructor( ledObservers ) { 
         console.log( "constructing PinState..." ); 
         this._ledObservers = ledObservers; 
-        this.pin_file_path = "C:\\Users\\EG\\Desktop\\2022\\june\\2nd_week\\tennis_cpp\\pin_data\\"; }
+        this.pin_file_path = "C:\\Users\\NewUser\\tennis_cpp\\pin_data\\"; 
+        // this.pin_file_path = "/mnt/c/Users/NewUser/tennis_cpp/pin_data/"; 
+    }
 
     updateLedPinData() {
         for ( const key in this._ledObservers[ 'observers' ]) {

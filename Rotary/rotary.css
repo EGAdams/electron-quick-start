@@ -1,18 +1,70 @@
-.arrow-up {
-    position: absolute;
-    width: 0;
-    left: 41%;
-    top: 18%;
-    border-left: 8px solid rgba(0, 0, 0, 0);
-    border-right: 8px solid rgba(0, 0, 0, 0);
-    border-bottom: 64px solid #474747;
-    z-index: -1000;
+/* -----------------------------------------------------------
+ *  Rotary switch – fully self-contained & responsive
+ * --------------------------------------------------------- */
+
+ :host {
+    /* Change this from the outside to get larger/smaller knobs */
+    --rotary-size: clamp(100px, 15vw, 180px);
+    display: inline-block;
+    /* Optional: reserve a little air around the knob */
+    margin: 1rem;
 }
 
-/* body {
-    background: #f4f4f4;
-} */
+/* ---------- outer bezel ---------------------------------- */
+.rotary-container {
+    position: relative;
+    width:  var(--rotary-size);
+    height: var(--rotary-size);
+    border-radius: 50%;
+    background: linear-gradient(#585858, #8F8F8F 70%, #DBDBDB);
+}
 
+/* ---------- inner knob ----------------------------------- */
+.rotary-switch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:  62%;
+    height: 62%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid #7E7E7E;
+    box-shadow: inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A;
+    background: linear-gradient(90deg,
+                #636068,
+                #242424 43%, #474747 44%,
+                #474747 56%, #7A7A7A 57%,
+                #5a5a5a 68%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;         /* anchor arrow to the “north” */
+    cursor: pointer;
+    transition: transform .4s;
+}
+
+/* ---------- white line on the knob (optional) ------------- */
+.rotary-switch::before {
+    content: "";
+    width: 2px;
+    height: 35%;
+    background: #fff;
+}
+
+/* ---------- arrow pointer --------------------------------- */
+.arrow-up {
+    /* centred horizontally inside .rotary-switch */
+    position: relative;
+    top: calc(var(--rotary-size)*-0.05);    /* lifts arrow a touch */
+    width: 0;
+    height: 0;
+    border-left:  calc(var(--rotary-size) * 0.04) solid transparent;
+    border-right: calc(var(--rotary-size) * 0.04) solid transparent;
+    border-bottom:calc(var(--rotary-size) * 0.24) solid #fff;
+    /* arrow z-index is below knob’s text (if any) */
+    z-index: 0;
+}
+
+/* ---------- decorative click “points” (kept from original) */
 .point {
     position: absolute;
     border: solid 1px #C5C5C5;
@@ -24,38 +76,4 @@
 .selected {
     background: #fff;
     border: solid 1px #05D6B5;
-}
-
-.rotary-container {
-    margin: 50px;
-    border-radius: 50%;
-    background: linear-gradient(#585858, #8F8F8F 70%, #DBDBDB);
-    position: fixed;
-    height: 100px;
-    width: 100px;
-    top: 82%;
-    left: 76.5%;
-}
-
-.rotary-switch {
-    margin: 0px;
-    position: fixed;
-    top: 87%;
-    left: 83%;
-    bottom: 4%;
-    right: 4%;
-    border: solid 1px #7E7E7E;
-    border-radius: 50%;
-    box-shadow: inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A;
-    background: linear-gradient(90deg, #636068, #242424 43%, #474747 44%, #474747 56%, #7A7A7A 57%, #5a5a5a 68%);
-    transition: .4s;
-}
-
-.rotary-switch:before {
-    display: block;
-    content: "";
-    width: 2px;
-    height: 35%;
-    background: #FFF;
-    margin: 1% auto;
 }

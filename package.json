@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "scss": "node-sass --watch scss -o css",
-    "build": "electron-packager . app --platform win32 --arch x64 --out dist/"
+    "scss": "sass --watch scss:css",
+    "build": "electron-packager . app --platform=win32 --arch=x64 --out=dist/"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -19,9 +19,9 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^18.1.0",
-    "electron-packager": "^15.5.1",
-    "node-sass": "^7.0.1"
+    "electron": "^35.0.1",
+    "electron-packager": "^17.1.2",
+    "sass": "^1.87.0"
   },
   "dependencies": {
     "jquery": "^3.6.0"
